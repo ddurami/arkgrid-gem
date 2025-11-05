@@ -1,0 +1,61 @@
+/* 공통 스타일 정의 */
+
+/* 타이틀 */
+.common-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* 서브 타이틀 */
+.common-subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* 섹션 레이블 (등급 선택, 활성 옵션 우선순위 등) */
+.common-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  line-height: 1.2;
+}
+
+/* 일반 텍스트 (공급 의지력, 포인트 등) */
+.common-text {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.2;
+}
+
+/* 버튼 텍스트 */
+.common-btn-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* 작은 텍스트 (배지 등) */
+.common-small-text {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* 카드 이름 */
+.common-card-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* 카드 통계 텍스트 */
+.common-card-stat {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* 일반 정보 텍스트 (코어 등급, 의지력 등) */
+.common-info-text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+

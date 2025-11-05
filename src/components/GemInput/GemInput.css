@@ -1,0 +1,256 @@
+.gem-input {
+  margin-bottom: var(--spacing-xl);
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: 0 2px 12px var(--shadow);
+}
+
+.gem-input__title {
+  composes: common-title from '../../styles/common.css';
+  margin-bottom: var(--spacing-lg);
+}
+
+.gem-input__form {
+  background-color: var(--bg-primary);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  border: 2px solid var(--border-color);
+  margin-bottom: var(--spacing-xl);
+}
+
+.gem-input__form-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-primary);
+}
+
+.gem-input__form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.gem-input__row {
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: flex-start;
+}
+
+.gem-input__field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.gem-input__label {
+  composes: common-label from '../../styles/common.css';
+}
+
+
+.gem-input__button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.gem-input__btn {
+  composes: common-btn-text from '../../styles/common.css';
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+}
+
+.gem-input__btn:hover:not(:disabled) {
+  opacity: 0.8;
+}
+
+.gem-input__btn--active {
+  background-color: var(--point-primary);
+  color: white;
+  border-color: var(--point-primary);
+}
+
+.gem-input__btn--type {
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: 0.85rem;
+}
+
+.gem-input__btn--order.gem-input__btn--active {
+  background-color: var(--order-primary);
+  border-color: var(--order-primary);
+}
+
+.gem-input__btn--chaos.gem-input__btn--active {
+  background-color: var(--chaos-primary);
+  border-color: var(--chaos-primary);
+}
+
+
+.gem-input__add-btn {
+  margin-top: var(--spacing-lg);
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--point-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.gem-input__add-btn:hover {
+  opacity: 0.9;
+}
+
+/* 보유 젬 목록 - 별도 섹터 */
+.gem-list {
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: 0 2px 12px var(--shadow);
+  margin-bottom: var(--spacing-xl);
+}
+
+.gem-list__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.gem-list__title {
+  composes: common-subtitle from '../../styles/common.css';
+  margin-bottom: 0;
+}
+
+.gem-list__reset-btn {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: var(--point-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.gem-list__reset-btn:hover {
+  opacity: 0.8;
+}
+
+.gem-list__subtitle {
+  composes: common-label from '../../styles/common.css';
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.gem-list__subtitle:first-of-type {
+  margin-top: 0;
+}
+
+.gem-compact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+  max-height: 400px;
+  overflow-y: auto;
+  padding: var(--spacing-lg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-primary);
+}
+
+.gem-compact-card {
+  composes: common-card-stat from '../../styles/common.css';
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm);
+  background-color: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid;
+  transition: background-color var(--transition-fast);
+}
+
+.gem-compact-card--order {
+  border-left-color: var(--order-primary);
+}
+
+.gem-compact-card--chaos {
+  border-left-color: var(--chaos-primary);
+}
+
+.gem-compact-card:hover {
+  background-color: var(--bg-secondary);
+}
+
+.gem-compact-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gem-compact-card__name {
+  composes: common-card-name from '../../styles/common.css';
+}
+
+.gem-compact-card--order .gem-compact-card__name {
+  color: var(--order-primary);
+}
+
+.gem-compact-card--chaos .gem-compact-card__name {
+  color: var(--chaos-primary);
+}
+
+.gem-compact-card__row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-xs);
+}
+
+.gem-compact-card__stat {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.gem-compact-card__remove {
+  padding: 2px 8px;
+  background-color: var(--error);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 0.7rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.gem-compact-card__remove:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 1024px) {
+  .gem-input__row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .gem-input__button-group {
+    justify-content: center;
+  }
+  
+  .gem-compact-card {
+    flex-wrap: wrap;
+    font-size: 0.75rem;
+  }
+}
+

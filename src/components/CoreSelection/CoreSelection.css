@@ -1,0 +1,190 @@
+.core-selection {
+    margin-bottom: var(--spacing-xl);
+    background-color: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: 0 2px 12px var(--shadow);
+}
+
+.core-selection__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.core-selection__title {
+    composes: common-title from "../../styles/common.css";
+}
+
+.core-selection__reset-btn {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background-color: var(--point-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity var(--transition-fast);
+}
+
+.core-selection__reset-btn:hover {
+    opacity: 0.9;
+}
+
+.core-selection__section {
+    margin-bottom: var(--spacing-lg);
+}
+
+.core-selection__section:last-child {
+    margin-bottom: 0;
+}
+
+.core-selection__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.core-card {
+    background-color: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: 0 2px 8px var(--shadow);
+    border: 2px solid;
+    transition: all var(--transition-normal);
+}
+
+.core-card--order {
+    border-color: var(--order-light);
+}
+
+.core-card--chaos {
+    border-color: var(--chaos-light);
+}
+
+.core-card__title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+.core-card--order .core-card__title {
+    color: var(--order-primary);
+}
+
+.core-card--chaos .core-card__title {
+    color: var(--chaos-primary);
+}
+
+.core-card__grades {
+    margin-bottom: var(--spacing-md);
+}
+
+.core-card__grades-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.core-card__section-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    line-height: 1.2;
+}
+
+.core-card__grade-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+}
+
+.core-card__grade-btn {
+    composes: common-btn-text from "../../styles/common.css";
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+}
+
+.core-card__grade-btn:hover:not(:disabled) {
+    opacity: 0.8;
+}
+
+.core-card__grade-btn--active {
+    background-color: var(--point-primary);
+    color: white;
+    border-color: var(--point-primary);
+}
+
+.core-card__willpower {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.2;
+}
+
+.core-card__priorities {
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+}
+
+.core-card__priority-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+}
+
+.core-card__priority-btn {
+    composes: common-btn-text from "../../styles/common.css";
+    position: relative;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    white-space: nowrap;
+}
+
+.core-card__priority-btn:hover:not(:disabled) {
+    opacity: 0.8;
+}
+
+.core-card__priority-btn:disabled {
+    background-color: var(--btn-disabled-bg);
+    color: var(--btn-disabled-text);
+    cursor: not-allowed;
+}
+
+.core-card__priority-btn--selected {
+    background-color: var(--point-primary);
+    color: white;
+    border-color: var(--point-primary);
+}
+
+.core-card__priority-badge {
+    composes: common-small-text from "../../styles/common.css";
+    display: inline-block;
+    margin-left: var(--spacing-xs);
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+    padding: 2px 4px;
+    border-radius: 4px;
+    line-height: 1;
+}
+
+@media (max-width: 768px) {
+    .core-selection__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .core-card__priority-buttons {
+        justify-content: center;
+    }
+}

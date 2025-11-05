@@ -1,0 +1,141 @@
+:root {
+  /* 라이트 모드 색상 */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --bg-tertiary: #e8e8e8;
+  --text-primary: #1a1a1a;
+  --text-secondary: #666666;
+  --text-disabled: #999999;
+  --border-color: #d0d0d0;
+  --shadow: rgba(0, 0, 0, 0.1);
+  
+  /* 포인트 컬러 (선택 상태 표시) */
+  --point-primary: #7c3aed;
+  --point-secondary: #9333ea;
+  --point-light: #ede9fe;
+  --point-dark: #6d28d9;
+  
+  /* 질서 (빨간색 계열) */
+  --order-primary: #c41e3a;
+  --order-secondary: #e74c3c;
+  --order-light: #fadbd8;
+  --order-dark: #8b1a2d;
+  --order-hover: #a01729;
+  
+  /* 혼돈 (파란색 계열) */
+  --chaos-primary: #2874a6;
+  --chaos-secondary: #3498db;
+  --chaos-light: #d6eaf8;
+  --chaos-dark: #1a5276;
+  --chaos-hover: #1f5f8b;
+  
+  /* 상태 색상 */
+  --success: #27ae60;
+  --success-light: #d5f4e6;
+  --warning: #f39c12;
+  --warning-light: #fdebd0;
+  --error: #c0392b;
+  --error-light: #fadbd8;
+  
+  /* 버튼 및 인터랙션 */
+  --btn-hover: rgba(0, 0, 0, 0.05);
+  --btn-active: rgba(0, 0, 0, 0.1);
+  --btn-disabled-bg: #e0e0e0;
+  --btn-disabled-text: #a0a0a0;
+  
+  /* 간격 및 크기 */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 250ms ease-in-out;
+}
+
+[data-theme="dark"] {
+  /* 다크 모드 색상 */
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --bg-tertiary: #3a3a3a;
+  --text-primary: #e8e8e8;
+  --text-secondary: #b0b0b0;
+  --text-disabled: #6a6a6a;
+  --border-color: #4a4a4a;
+  --shadow: rgba(0, 0, 0, 0.3);
+  
+  /* 포인트 컬러 (다크 모드) */
+  --point-primary: #a78bfa;
+  --point-secondary: #8b5cf6;
+  --point-light: #2e1065;
+  --point-dark: #c4b5fd;
+  
+  /* 질서 (다크 모드에서 약간 밝게) */
+  --order-primary: #e74c3c;
+  --order-secondary: #ec7063;
+  --order-light: #3a2121;
+  --order-dark: #c41e3a;
+  --order-hover: #d13d2f;
+  
+  /* 혼돈 (다크 모드에서 약간 밝게) */
+  --chaos-primary: #3498db;
+  --chaos-secondary: #5dade2;
+  --chaos-light: #1e2f3f;
+  --chaos-dark: #2874a6;
+  --chaos-hover: #2e86c1;
+  
+  /* 상태 색상 (다크 모드) */
+  --success: #2ecc71;
+  --success-light: #1e3a29;
+  --warning: #f5b041;
+  --warning-light: #3a2f1e;
+  --error: #e74c3c;
+  --error-light: #3a2121;
+  
+  /* 버튼 및 인터랙션 (다크 모드) */
+  --btn-hover: rgba(255, 255, 255, 0.05);
+  --btn-active: rgba(255, 255, 255, 0.1);
+  --btn-disabled-bg: #2a2a2a;
+  --btn-disabled-text: #5a5a5a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+input {
+  font-family: inherit;
+}
+
